@@ -1,0 +1,1 @@
+I used to have it so that when I'm classifying a test instance, i would create the crosstab df. Which means if I'm classifying 10,000 test instances, I'm creating 10,000 crosstabs. Instead, I decided to create the crosstab at the start for every possible value of an attribute and just look up that same number every time i needed to.
