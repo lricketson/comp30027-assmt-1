@@ -4,3 +4,11 @@ I just:
 
 - identified the category value most strongly predictive of each class. I.e. the value that makes it most likely for a given instance to be class 0, and the value that makes it most liekly for it to be class 1.
 - also listed the top 5 most strongly predictive attribute values for each class, so the values for any category such that knowing them makes it most likely an instance is class 0 or 1.
+
+The EM works like this:
+
+- i initialise the model by training it on the supervised train csv. It has 15k rows. For continuous variables I get baseline means and std devs, and for categorical variables I get baseline probabilities of an instance being class c given its attribute x has value v.
+- I then apply those parameters to the unlabelled dataset, and get probabilities of each instance being of each class c.
+- I then integrate that dataset back into the training process, treating the probabilities as expected values and including them in calculations for priors and likelihoods. E.g. we use a new mean and std dev for calculating likelihoods for continuous vars, and new (fractional) counts for calculating likelihoods for categorical vars.
+- then reapply the new parameters to the unlabelled dataset, get new probabilities of each instance being of class c
+- rinse and repeat until the probabilities converge, and then classify based on the probabilities
