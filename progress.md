@@ -12,3 +12,6 @@ The EM works like this:
 - I then integrate that dataset back into the training process, treating the probabilities as expected values and including them in calculations for priors and likelihoods. E.g. we use a new mean and std dev for calculating likelihoods for continuous vars, and new (fractional) counts for calculating likelihoods for categorical vars.
 - then reapply the new parameters to the unlabelled dataset, get new probabilities of each instance being of class c
 - rinse and repeat until the probabilities converge, and then classify based on the probabilities
+- The likelihood of seeing an instance with attributes xi = vi for all attributes changes per iteration, because mean/std are changing, and also since class counts changes per iteration since we're recalculating expected class counts, categorical attribute probabilities change too.
+
+Log likelihood is this: it's the sum over all instances of the logs of the probability that the class is 0 + the probability that its attributes x1 = v1 given class is 0, ... xn = vn given class is 0, + the probability that the class is 1 + the probability that its attributes x1 = v1 given class is 1, ... xn = vn given class is 1

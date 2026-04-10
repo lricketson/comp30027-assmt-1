@@ -1,1 +1,3 @@
-Must return log likelihood from the expectation step. and also figure out what the log likelihood is exactly.
+figure out how to incorporate validation set.
+use matplotlib or seaborn to plot the log likelihood over each iteration of the EM algorithm.
+incorporate the weight = 0.5 and alpha = 0.5 into the final test set eval
