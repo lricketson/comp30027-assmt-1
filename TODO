@@ -1,2 +1,11 @@
 Use bhattacharyya coefficient to quantify how much mean/variance has changed across the two models Q1 and Q3
 Also rewrite the report section for Q1 pt 2 since it asks for a quantified measure of the difference between 2 distribs
+write up answers for q4 pt 8
+a.
+distrib didnt shift much
+b
+use bhattacharyya coeff for continuous and look at education for categorical
+c
+look at terminal output for seeing if most predictive features have changed. terminal output ss in notion doc
+
+** WRITE COMMENTS AND DELETE GEMINI COMMENTS THROUGHOUT CODE **
