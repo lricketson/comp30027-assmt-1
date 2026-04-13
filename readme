@@ -1,0 +1,2 @@
+To run this project:
+Everything needed to run this project is done by running each cell in sequential order. Some cells (which are marked) may take 5+ minutes to run as the EM algorithm is very computationally intense. There are hardcoded file paths for the csvs, which point to these csv files being inside a folder named 'datasets' which is in the same folder as the main Jupyter NB.
