@@ -1,11 +1,15 @@
 Use bhattacharyya coefficient to quantify how much mean/variance has changed across the two models Q1 and Q3
 Also rewrite the report section for Q1 pt 2 since it asks for a quantified measure of the difference between 2 distribs
 write up answers for q4 pt 8
-a.
-distrib didnt shift much
 b
-use bhattacharyya coeff for continuous and look at education for categorical
+write how means/variances have changed for continuous features by talking about new top 3 bha coeff output:
+[{'feature': 'capital-gain', 'bha_coeff': 0.502}, {'feature': 'capital-loss', 'bha_coeff': 0.79}, {'feature': 'education-num', 'bha_coeff': 0.905}]
+talk about how categorical feature probabilities changed
+POSSIBLY THINK ABOUT WHETHER CURRENT APPLICATION OF BHATTACHARYYA COEFFS FOR Q4 ACTUALLY ANSWERS THE Q OF WHETHER THE MEANS AND VARIANCES SHIFTED. COS MAYBE YOURE COMPARING CLASS 0 AND CLASS 1 IN SEMI-SUPERVISED INSTEAD OF COMPARING OVERALL FEATURE BETWEEN SUPERVISED AND SEMI-SUPERVISED
+
 c
-look at terminal output for seeing if most predictive features have changed. terminal output ss in notion doc
+look at terminal output for seeing if most predictive features have changed
 
 ** WRITE COMMENTS AND DELETE GEMINI COMMENTS THROUGHOUT CODE **
+
+Write about weights and alpha choices by how you tested on the validation set
